@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vaishnavi's Birthday Surprise</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="decor"></div><div id="confetti"></div>
+<section class="screen active" id="passwordScreen"><div class="card">
+<div class="flowers">🌷 ✨ 🌸 🎀 🌼</div><p class="eyebrow">A LITTLE SURPRISE</p>
+<h1>Hey, <span data-name></span>! 🌸</h1><p class="sub">There is a tiny secret waiting behind this door.</p>
+<input id="passwordInput" type="text" inputmode="numeric" autocomplete="off" placeholder="Enter birthday password" class="passwordInput">
+<button class="primary" id="unlockBtn">Unlock ✨</button><p id="passwordError" class="error"></p>
+<div id="musicControl" class="musicControl hidden"><button class="musicButton" id="musicButton">♫ Music On</button></div></div></section>
+
+<section class="screen" id="questionScreen"><div class="card">
+<p class="eyebrow" id="qNum">QUESTION 01</p><h1 id="qTitle"></h1><p id="qText" class="sub"></p>
+<div class="questionActions" id="questionActions"><button class="primary" id="yesBtn"></button> <button class="secondary" id="noBtn"></button></div>
+<div id="leaveConfirm" class="reaction hidden"><p class="confirmTitle">Are you really sure you want to leave? 🥺</p><button class="primary" id="leaveYes">Yes, I'm Sure</button><button class="secondary" id="leaveNo">No, Wait! 🌸</button></div>
+<div id="reaction" class="reaction hidden"><p id="reactionText"></p><img id="reactionGif" class="gif hidden"><div id="catFallback" class="cat">ฅ^•ﻌ•^ฅ</div></div>
+</div></section>
+
+<section class="screen" id="introScreen"><div class="card">
+<p class="eyebrow" data-date></p><div class="flowers">🌸 🦋 🌷</div>
+<h1>Happiest Birthday,<br><span data-name></span> 🎂</h1><p class="sub" data-intro></p>
+<button class="primary" data-next="photosScreen">Open the 11:11 photo bank 📸</button>
+</div></section>
+
+<section class="screen" id="photosScreen"><div class="card wide">
+<p class="eyebrow">11:11 PHOTO BANK</p><h1>11 little moments 📸</h1><p class="sub">One memory at a time. Take your time. 🦋</p>
+<div class="photoProgress"><span id="photoCount">1 / 11</span></div>
+<div class="singlePhoto" id="singlePhoto"></div>
+<p class="photoCaption" id="photoCaption"></p>
+<div class="photoControls"><button class="secondary hidden" id="backPhoto">← Back</button><button class="primary" id="nextPhoto">Show More →</button></div>
+</div></section>
+
+<section class="screen" id="catScreen"><div class="card">
+<p class="eyebrow">VERY IMPORTANT ANNOUNCEMENT</p><h1>The Birthday Cat Has Arrived. 🐱</h1>
+<img id="mainCat" class="gif hidden"><div id="mainCatFallback" class="cat big">ฅ^•ﻌ•^ฅ</div>
+<p class="sub" data-cat></p><button class="primary" data-next="cakeScreen">Where is the cake? 🎂</button>
+</div></section>
+
+<section class="screen" id="cakeScreen"><div class="card">
+<p class="eyebrow">THE CAKE CEREMONY</p><h1>Cut the cake! 🎂</h1><p id="cakeText" class="sub">Drag the knife across the cake.</p>
+<div class="cakeStage" id="cakeStage">
+  <div class="cakeGlow"></div>
+  <div class="knife" aria-label="Cake knife"><span class="knifeHandle"></span><span class="knifeGuard"></span><span class="knifeBlade"></span></div>
+  <div class="cake">
+    <div class="candles"><span></span><span></span><span></span></div>
+    <div class="cakeTop"><div class="creamDrip"></div></div>
+    <div class="cakeLayer upper"><div class="creamStripe"></div></div>
+    <div class="cakeLayer lower"><div class="creamStripe"></div></div>
+    <div class="cakeDecor"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cakePlate"></div>
+  </div>
+</div>
+<button class="primary hidden" id="finishCake">Reveal the birthday message 🎁</button>
+</div></section>
+
+<section class="screen" id="letterScreen"><div class="card">
+<div class="envelope">✉️</div><p class="eyebrow">ONE LAST THING</p><h1>A birthday note 🌷</h1>
+<div class="letter" data-letter></div><button class="secondary" id="replay">Replay 🔄</button>
+</div></section>
+<audio id="bgMusic" preload="auto" loop></audio>
+<script src="script.js"></script>
+</body></html>
